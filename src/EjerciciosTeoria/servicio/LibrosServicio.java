@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package colecciones.servicio;
+package EjerciciosTeoria.servicio;
 
-import colecciones.entidades.Libros;
+import EjerciciosTeoria.entidades.Libros;
 import java.util.ArrayList;
 import java.util.Scanner;
 

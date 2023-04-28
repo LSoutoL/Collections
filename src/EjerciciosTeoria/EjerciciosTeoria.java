@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package colecciones;
+package EjerciciosTeoria;
 
-import colecciones.entidades.Libros;
-import colecciones.servicio.LibrosServicio;
+import EjerciciosTeoria.entidades.Libros;
+import EjerciciosTeoria.servicio.LibrosServicio;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -18,7 +18,7 @@ import java.util.TreeSet;
  *
  * @author lucia
  */
-public class Colecciones {
+public class EjerciciosTeoria {
 
     /**
      * @param args the command line arguments
