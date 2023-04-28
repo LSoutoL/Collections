@@ -5,6 +5,11 @@
  */
 package EjerciciosPracticos.servicios;
 
+import EjerciciosPracticos.entidades.Alumno;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
 /**
  *
  * @author lucia
@@ -20,5 +25,42 @@ package EjerciciosPracticos.servicios;
  * por el método y mostrado en el main.
  */
 public class AlumnoServicio {
+    private ArrayList <Alumno> AlumnoList;
+    private Scanner leer;
+
+    public AlumnoServicio() {
+        this.AlumnoList= new ArrayList();
+        this.leer= new Scanner(System.in).useDelimiter("\n");
+    }
+       
+    public ArrayList<Alumno> crearAlumno () {
+        String opcion;
+        do {
+        System.out.println("Ingrese el nombre del alumno");
+        String nombre=leer.next();
+        ArrayList <Integer> notas = new ArrayList();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Ingrese la nota " + (i+1)+ " del alumno:");
+            notas.add(leer.nextInt());
+        }
+        AlumnoList.add(new Alumno(nombre, notas));
+            System.out.println("Desea ingresar otro alumno? S/N");
+            opcion = leer.next();
+      } while (opcion.equalsIgnoreCase("s"));
+        return AlumnoList;
+    }  
+    public double notaFinal (String nombre){
+        Iterator <Alumno> it = AlumnoList.iterator();
+        int suma=0;
+        for (Alumno alumno : AlumnoList) {
+            if (alumno.getNombre().equalsIgnoreCase(nombre)){
+                for (int nota : alumno.getNotas()) {
+                    System.out.println(nota);
+                    suma+=nota;
+                }
+            }
+        }
+     return suma/3;   
+    }
     
 }
