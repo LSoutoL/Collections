@@ -7,6 +7,7 @@ package EjerciciosPracticos;
 
 import EjerciciosPracticos.entidades.Alumno;
 import EjerciciosPracticos.servicios.AlumnoServicio;
+import EjerciciosPracticos.servicios.PeliculaServicio;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -68,7 +69,7 @@ public class EjerciciosPracticos {
              System.out.println(otro);
         });*/
          
-        AlumnoServicio servicio = new AlumnoServicio();
+        /*AlumnoServicio servicio = new AlumnoServicio();
         ArrayList<Alumno> AlumnoList=servicio.crearAlumno();
         System.out.println("Indique el alumno cuya nota final desea averiguar");
         String nombre = leer.next();
@@ -77,6 +78,15 @@ public class EjerciciosPracticos {
                 System.out.println(servicio.notaFinal(nombre));   
             }
         }
+        */
+        PeliculaServicio servicio = new PeliculaServicio();
+        servicio.cargarPelicula();
+        servicio.mostrarPelis();
+        servicio.duracionMayor();
+        servicio.duracionDescendente();
+        servicio.duracionAscendente();
+        servicio.tituloAlfabetico();
+        servicio.directorAlfabetico();
     }
     
 }
