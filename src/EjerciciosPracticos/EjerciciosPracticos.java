@@ -7,7 +7,9 @@ package EjerciciosPracticos;
 
 import EjerciciosPracticos.entidades.Alumno;
 import EjerciciosPracticos.servicios.AlumnoServicio;
+import EjerciciosPracticos.servicios.PaisServicio;
 import EjerciciosPracticos.servicios.PeliculaServicio;
+import EjerciciosPracticos.servicios.ProductosServicios;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -79,14 +81,23 @@ public class EjerciciosPracticos {
             }
         }
         */
-        PeliculaServicio servicio = new PeliculaServicio();
+        /*PeliculaServicio servicio = new PeliculaServicio();
         servicio.cargarPelicula();
         servicio.mostrarPelis();
         servicio.duracionMayor();
         servicio.duracionDescendente();
         servicio.duracionAscendente();
         servicio.tituloAlfabetico();
-        servicio.directorAlfabetico();
+        servicio.directorAlfabetico();*/
+        
+        /*PaisServicio serv = new PaisServicio();
+        serv.cargarPais();
+        serv.Alfabetico();
+        serv.eliminarPais();*/
+        
+        ProductosServicios servicio = new ProductosServicios();
+        servicio.menu();
+        
     }
     
 }

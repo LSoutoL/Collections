@@ -13,26 +13,28 @@ import java.util.Comparator;
  * @author lucia
  */
 public class PeliculaComparadores {
-    public static Comparator<Pelicula> duracionAscendente = new Comparator <Pelicula> () {
+    public static Comparator<Pelicula> duracionDescendente = new Comparator<Pelicula>() {
+        @Override
+        public int compare(Pelicula t, Pelicula t1) {
+            return t1.getDuracion().compareTo(t.getDuracion());
+        }
+    };
+    
+    public static Comparator<Pelicula> duracionAscendente = new Comparator<Pelicula>() {
         @Override
         public int compare(Pelicula t, Pelicula t1) {
             return t.getDuracion().compareTo(t1.getDuracion());
         }
     };
     
-    public static Comparator<Pelicula> duracionDescendente = new Comparator<Pelicula>() {
-        @Override
-        public int compare(Pelicula t, Pelicula t1) {
-           return t1.getDuracion().compareTo(t.getDuracion());
-        }
-    };
     public static Comparator<Pelicula> tituloAlfabetico = new Comparator<Pelicula>() {
         @Override
         public int compare(Pelicula t, Pelicula t1) {
             return t.getTitulo().compareTo(t1.getTitulo());
         }
     };
-    public static Comparator<Pelicula> directorAlfabetico = new Comparator <Pelicula>() {
+    
+    public static Comparator<Pelicula> directorAlfabetico = new Comparator<Pelicula>() {
         @Override
         public int compare(Pelicula t, Pelicula t1) {
             return t.getDirector().compareTo(t1.getDirector());

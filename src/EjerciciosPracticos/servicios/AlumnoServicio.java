@@ -52,15 +52,16 @@ public class AlumnoServicio {
     public double notaFinal (String nombre){
         Iterator <Alumno> it = AlumnoList.iterator();
         int suma=0;
+        int cant=0;
         for (Alumno alumno : AlumnoList) {
             if (alumno.getNombre().equalsIgnoreCase(nombre)){
                 for (int nota : alumno.getNotas()) {
-                    System.out.println(nota);
                     suma+=nota;
                 }
+                cant=alumno.getNotas().size();
             }
         }
-     return suma/3;   
+     return suma/cant;   
     }
     
 }
