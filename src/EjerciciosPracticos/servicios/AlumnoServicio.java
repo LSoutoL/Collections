@@ -50,18 +50,16 @@ public class AlumnoServicio {
         return AlumnoList;
     }  
     public double notaFinal (String nombre){
-        Iterator <Alumno> it = AlumnoList.iterator();
         int suma=0;
-        int cant=0;
         for (Alumno alumno : AlumnoList) {
             if (alumno.getNombre().equalsIgnoreCase(nombre)){
                 for (int nota : alumno.getNotas()) {
                     suma+=nota;
                 }
-                cant=alumno.getNotas().size();
+                suma=suma/alumno.getNotas().size();
             }
         }
-     return suma/cant;   
+     return suma;   
     }
     
 }
