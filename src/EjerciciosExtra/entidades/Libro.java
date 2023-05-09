@@ -5,6 +5,8 @@
  */
 package EjerciciosExtra.entidades;
 
+import java.util.Objects;
+
 /**
  *
  * @author lucia
@@ -59,6 +61,36 @@ public class Libro {
         this.prestados = prestados;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.titulo);
+        hash = 89 * hash + Objects.hashCode(this.autor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Libro other = (Libro) obj;
+        if (!Objects.equals(this.titulo, other.titulo)) {
+            return false;
+        }
+        if (!Objects.equals(this.autor, other.autor)) {
+            return false;
+        }
+        return true;
+    }
+
+    
     @Override
     public String toString() {
         return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", ejemplares=" + ejemplares + ", prestados=" + prestados + '}';
