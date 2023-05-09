@@ -45,7 +45,7 @@ public class EjerciciosExtra {
         HashMap <Integer, String> ciudades = new HashMap();
         
         //Agregar 10 ciudades:
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("Indique el nombre de una ciudad");
             String ciudad = leer.next();
             System.out.println("Ingrese el codigo postal de esa ciudad");
@@ -94,6 +94,7 @@ public class EjerciciosExtra {
                     i++;
                 }                
             }*/
+            if (ciudades.containsValue(nombre)){
             for (Integer key : ciudades.keySet()) {
             String value = ciudades.get(key);
             if(nombre.equalsIgnoreCase(value)){
@@ -101,7 +102,8 @@ public class EjerciciosExtra {
                 i++;
             }
             }
-        } while (i<1);
+            } else System.out.println("La ciudad no fue encontrada.");
+        } while (i<3);
         for (Integer cods : ciudades.keySet()) {
             System.out.println("Ciudad: " + ciudades.get(cods) + " - Codigo Postal: "+ cods);
         }
